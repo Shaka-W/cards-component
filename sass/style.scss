@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto 0 auto;
+  width: 90%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Colors */
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: .9rem;
+  background-color: $very-light-gray;
+}
+
+/* Cards */ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 50vh;
+    flex: 0 0 33%;
+
+
+    &__img-container {
+      margin-bottom: 1.5rem;
+    }
+
+    &__img {
+      max-width: 100%;
+    }
+
+    &__header {
+      font-family: 'Big Shoulders Display', cursive;
+      color: $very-light-gray;
+      margin-bottom: 2rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    &__description {
+      font-size: 1.3rem;
+      color: $transparent-white;
+    }
+
+    &__button-container {
+      margin-top: auto;
+    }
+
+    &__button {
+      display: inline-block;
+      background-color: $very-light-gray;
+      border: none;
+      border-radius: 25px;
+      padding: 1rem 3rem;
+    }
+
+    /* Modifiers */
+    &--sedan {
+      background-color: $bright-orange;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &--suv {
+      background-color: $dark-cyan;
+    }
+
+    &--luxury {
+      background-color: $very-dark-cyan;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &__button--sedan {
+      color: $bright-orange;
+    }
+
+    &__button--suv {
+      color: $dark-cyan;
+    }
+
+    &__button--luxury {
+      color: $very-dark-cyan;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .cards {
+
+    .card {
+      flex: 0 0 420px;
+      margin: 0 auto;
+
+      &--sedan {
+        border-radius: 5px 5px 0 0;
+      }
+
+      &--suv {
+        border-radius: 0;
+      }
+
+      &--luxury {
+        border-radius: 0 0 5px 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .cards {
+
+    .card {
+      flex: 0 0 90%;
+    }
+  }
+}
+
+.attribution { 
+  font-size: 1rem; 
+  text-align: center; 
+
+  a { 
+    color: hsl(228, 45%, 44%); 
+  }
+}

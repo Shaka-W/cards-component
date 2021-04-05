@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto 0 auto;
+  width: 90%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Colors */
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: .9rem;
+  background-color: #f2f2f2;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  height: 50vh;
+  flex: 0 0 33%;
+  /* Modifiers */
+}
+
+.cards .card__img-container {
+  margin-bottom: 1.5rem;
+}
+
+.cards .card__img {
+  max-width: 100%;
+}
+
+.cards .card__header {
+  font-family: 'Big Shoulders Display', cursive;
+  color: #f2f2f2;
+  margin-bottom: 2rem;
+}
+
+.cards .card__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.cards .card__description {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cards .card__button-container {
+  margin-top: auto;
+}
+
+.cards .card__button {
+  display: inline-block;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 25px;
+  padding: 1rem 3rem;
+}
+
+.cards .card--sedan {
+  background-color: #e38826;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.cards .card--suv {
+  background-color: #006970;
+}
+
+.cards .card--luxury {
+  background-color: #004241;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.cards .card__button--sedan {
+  color: #e38826;
+}
+
+.cards .card__button--suv {
+  color: #006970;
+}
+
+.cards .card__button--luxury {
+  color: #004241;
+}
+
+@media (max-width: 900px) {
+  .cards .card {
+    flex: 0 0 420px;
+    margin: 0 auto;
+  }
+  .cards .card--sedan {
+    border-radius: 5px 5px 0 0;
+  }
+  .cards .card--suv {
+    border-radius: 0;
+  }
+  .cards .card--luxury {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+@media (max-width: 460px) {
+  .cards .card {
+    flex: 0 0 90%;
+  }
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
